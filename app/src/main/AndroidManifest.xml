@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.galen.androidfundamentals" >
+    <uses-sdk android:minSdkVersion="11" />
 
     <application
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/CustomActionBarTheme" >
+        <!-- Home activity (has no parent activity) -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.galen.androidfundamentals.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Child of home activity -->
         <activity
-            android:name=".DisplayMessageActivity"
+            android:name="com.galen.androidfundamentals.DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName="com.galen.androidfundamentals.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.galen.androidfundamentals.MainActivity" />

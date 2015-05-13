@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom themes to apply to activities -->
+    <style name="CustomActionBarTheme"
+        parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/CustomStyle</item>
+    </style>
+
+    <!-- ActionBar background -->
+    <style name="CustomStyle"
+        parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">#34495e</item>
+        <item name="android:titleTextStyle">@style/CustomTitleText</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="CustomTitleText"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#3498db</item>
+    </style>
+</resources>

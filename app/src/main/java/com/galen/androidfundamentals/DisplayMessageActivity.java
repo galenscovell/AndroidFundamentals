@@ -20,9 +20,12 @@ public class DisplayMessageActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Set app icon as UP button back to parent activity
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Get message from Intent which called this activity
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        // Assemble text view
         TextView textView = new TextView(this);
         textView.setTextSize(40);
         textView.setText(message);
@@ -45,4 +48,3 @@ public class DisplayMessageActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
-
